@@ -61,18 +61,24 @@ $ python3 -m venv .venv
 ```
 
 6 - Ativando o venv (Conforme https://flask.palletsprojects.com/en/2.3.x/installation/) 
+Antes de trabalhar em seu projeto, ative o ambiente correspondente:
 ```
 $ . .venv/bin/activate
 ```
 
-7 - Criando o arquivo de manifesto `requirements.txt`.
+7 - Dentro do ambiente ativado, use o seguinte comando para instalar o Flask:
+```
+$ pip install Flask
+```
+
+8 - Criando o arquivo de manifesto `requirements.txt`.
 Em vez de instalar pacotes individualmente, pip permite que você declare todas as dependências em um Arquivo de Requisitos. 
 Por exemplo, você pode criar um arquivo `requirements.txt` na raiz do projeto, contendo todas as bibliotecas que deseja instalar:
 ```
 $ python3 -m pip install -r requirements.txt
 ```
 
-8 - Com a lib do Flask instalada no projeto, o comando será: `$ flask --app flaskr run`
+9 - Com a lib do Flask instalada no projeto, o comando será: `$ flask --app flaskr run`
 ```
 $ flask --app flaskr run --debugger (Faz o debug e o reload do código)
 ```
@@ -112,6 +118,8 @@ $ luciolemos@dev:~/my_python_projects$ mkdir python_project_1 && cd $_
 ```
 
 6 - INSTALANDO O VENV
+Use um ambiente virtual para gerenciar as dependências do seu projeto, tanto no desenvolvimento quanto na produção.
+Qual problema um ambiente virtual resolve? Quanto mais projetos Python você tiver, maior a probabilidade de precisar trabalhar com diferentes versões de bibliotecas Python ou até mesmo o próprio Python. Versões mais recentes de bibliotecas para um projeto podem interromper a compatibilidade em outro projeto. Ambientes virtuais são grupos independentes de bibliotecas Python, uma para cada projeto. Os pacotes instalados para um projeto não afetarão outros projetos ou pacotes do sistema operacional.
 ```
 $ sudo apt install python3.10-venv
 ```
